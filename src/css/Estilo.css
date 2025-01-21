@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.titulo {
+    color: #333;
+}
+
+.left-side {
+    width: 475px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+    width: 100%;
+}
+
+.buttons button {
+    flex: 1; 
+    padding: 10px 0; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f7221f;
+    color: white;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.right-side {
+    flex-grow: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+.popup-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.popup-content th, .popup-content td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.popup-content th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.popup-content tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.popup-content tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: #222;
+    color: white;
+}
+
+
+
+.wave {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(15);
+        opacity: 0;
+    }
+}

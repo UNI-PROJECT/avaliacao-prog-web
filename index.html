@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudantes de LCC3T</title>
+    <link rel="stylesheet" href="/src/css/Estilo.css" />
+  </head>
+  <body style="font-family: Arial, sans-serif">
+    <div class="prin">
+      <div class="container" id="wave-effect">
+        <div class="left-side">
+          <div class="logo-container">
+            <img
+              src="./src/img/logotipo.png"
+              alt="Logo_do_Imetro"
+              class="logo"
+              style="padding-bottom: 20%; width: 100px"
+            />
+          </div>
+
+          <form id="studentForm">
+            <div class="titulo">
+              <center>
+                <h2 style="font-size: 200%">SISA - IMETRO</h2>
+                <br />
+              </center>
+            </div>
+            <div class="form-group">
+              <label for="name">Nome do Estudante</label>
+              <input type="text" id="name" placeholder="Nome do estudante" />
+            </div>
+            <div class="form-group">
+              <label for="matricula">Número de Matrícula</label>
+              <input
+                type="text"
+                id="matricula"
+                placeholder="Número de matrícula"
+              />
+            </div>
+
+            <!-- <div class="form-group">
+              <label for="nota1">Primeira Nota</label>
+              <input type="text" id="nota1" placeholder="Nota 1" />
+            </div>
+            <div class="form-group">
+              <label for="nota2">Segunda Nota</label>
+              <input type="text" id="nota2" placeholder="Nota 2" />
+            </div>
+            <div class="form-group">
+              <label for="nota3">Terceira Nota</label>
+              <input type="text" id="nota3" placeholder="Nota 3" />
+            </div> -->
+
+            <div class="buttons">
+              <button type="button" onclick="assignGrades()">Atribuir</button>
+              <button type="button" onclick="clearAll()">Limpar</button>
+              <button type="button" onclick="viewGrades()">Consultar</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Lado direito com a imagem gif -->
+        <div class="right-side">
+          <img
+            src="/src/img/outorga2 .jpeg"
+            alt="Imagem Animada"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3>Notas dos Estudantes</h3>
+        <ul id="resultList"></ul>
+      </div>
+    </div>
+
+    <footer>&copy; LCC3T Angola 2025</footer>
+
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>
