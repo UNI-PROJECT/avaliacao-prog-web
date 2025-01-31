@@ -80,7 +80,25 @@
       </div>
     </div>
 
-    <footer>&copy; LCC3T Angola 2025</footer>
+    <footer>
+      &copy; LCC3T Angola 2025
+      <div id="clock"></div>
+    </footer>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById(
+          "clock"
+        ).innerText = `Hora Atual: ${hours}:${minutes}:${seconds}`;
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
 
     <script src="/src/js/script.js"></script>
   </body>

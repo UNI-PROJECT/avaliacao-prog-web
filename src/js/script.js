@@ -122,3 +122,38 @@ function deleteRecord(matricula) {
   students = students.filter((student) => student.matricula !== matricula);
   viewGrades();
 }
+
+//Parte da prova
+class Login {
+  constructor() {
+    this.username = document.getElementById("username");
+    this.password = document.getElementById("password");
+    this.errorMessageElement = document.getElementById("error-message");
+    this.loginButton = document.getElementById("loginBtn");
+
+    this.loginButton.addEventListener("click", (event) =>
+      this.handleLogin(event)
+    );
+  }
+
+  handleLogin(event) {
+    event.preventDefault();
+
+    const isValid = this.saveToDatabase(
+      this.username.value,
+      this.password.value
+    );
+
+    if (isValid) {
+      window.location.href = "index.html";
+    } else {
+      alert("Login falhou. Verifique suas credenciais.");
+    }
+  }
+
+  saveToDatabase(username, password) {
+    return username === "mardoche" && password === "pembele";
+  }
+}
+
+const login = new Login();
